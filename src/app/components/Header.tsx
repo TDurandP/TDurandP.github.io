@@ -40,7 +40,7 @@ export default function Header({scrollProjectsRef} : HeaderParamsType) {
                 setCooldown(5);
             }
         }
-    }, [cooldown])
+    }, [cooldown, messages, motdIndex, setCooldown])
 
     const browseProjects = () => {
         // eslint-disable-next-line

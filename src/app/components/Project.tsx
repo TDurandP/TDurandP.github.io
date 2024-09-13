@@ -10,7 +10,7 @@ interface projectParamsType {
     selected: string
 }
 
-export default function project({ projet, selected } : projectParamsType) {
+export default function Project({ projet, selected } : projectParamsType) {
 
 
     // ${projet.title.toLowerCase().includes(selected.toLowerCase()) ? 
