@@ -21,8 +21,7 @@ const descPageXboxHQ2: descriptionType = {
     paragraphes: [
         "Afin d'ajouter de la profondeur et de l'intérêt à XBOXHQ, un côté 'spéculatif' a été mis en place, notamment en utilisant une API de marketplace permettant de connaitre une moyenne du prix sur le jeu cible, en temps réel.",
         "Cet aspect 'spéculatif' peut également etre améliorer en y ajouter des graphiques financiers ou statistiques.",
-        "L'implémentation de la notion 3D sur un site internet grâce à Three.JS ainsi que la modélisation 3D de la jaquette du jeu furent une première bonne expérience que je souhaite renouveler."
-    ],
+        "L'implémentation de la notion 3D sur un site internet grâce à Three.JS ainsi que la modélisation 3D de la jaquette du jeu furent une première bonne expérience que je souhaite renouveler."],
     index: 1
 }
 
