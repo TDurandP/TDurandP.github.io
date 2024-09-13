@@ -14,7 +14,7 @@ import { toshilive } from "./projets/toshilive";
 export default function Home() {
 
   const [project, setProject] = useState<'nonogram' | 'ménestrel' | 'portfolio' | 'toshilive' | 'xboxhq'>('nonogram');
-  const scrollProjectsRef = useRef(null);
+  const scrollProjectsRef = useRef<HTMLImageElement>(null);
 
   const handleHighlightProject = () => {
     switch (project) {
@@ -71,7 +71,6 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-start">
-
       <Header scrollProjectsRef={scrollProjectsRef} />
       <Image src={`./icons/archive.svg`} width={100} height={100} alt={`Archive projects icon`} className="mt-10 mb-5" ref={scrollProjectsRef} />
       <Chronology setProject={setProject} project={project} />

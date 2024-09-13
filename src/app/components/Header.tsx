@@ -1,10 +1,14 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { MutableRefObject, useEffect, useState } from 'react';
 import Image from 'next/image';
 import useCooldown from '../hooks/useCooldown';
 
-export default function Header({scrollProjectsRef}) {
+interface HeaderParamsType {
+    scrollProjectsRef: MutableRefObject<HTMLDivElement | null>
+}
+
+export default function Header({scrollProjectsRef} : HeaderParamsType) {
 
     const [showLinkedin, setShowLinkedin] = useState<Boolean>(false);
     const messageAuto = useState<motd>();
@@ -26,21 +30,21 @@ export default function Header({scrollProjectsRef}) {
 
 
 
-    const manageMotd = () => {
+
+
+    useEffect(() => {
         if (cooldown === 0) {
             if (motdIndex == messages.length - 1) setMotdIndex(0);
             else setMotdIndex(motdIndex + 1);
-
-            setCooldown(5);
+            if (typeof setCooldown === 'function') {
+                setCooldown(5);
+            }
         }
-    }
-
-    useEffect(() => {
-        manageMotd();
     }, [cooldown])
 
     const browseProjects = () => {
-        scrollProjectsRef.current?.scrollIntoView({ behavior: 'smooth' });
+        // eslint-disable-next-line
+        if(scrollProjectsRef.current != null) scrollProjectsRef.current?.scrollIntoView({ behavior: 'smooth' });
       };
     
 

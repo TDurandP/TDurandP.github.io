@@ -3,10 +3,14 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { projetType } from '../types/projetType';
-import { stackType } from '../types/stackType';
-import { descriptionType } from '../types/descriptionType';
+import { currentStackType } from '../types/currentStackType';
 
-export default function project({ projet, selected }) {
+interface projectParamsType {
+    projet: projetType,
+    selected: string
+}
+
+export default function project({ projet, selected } : projectParamsType) {
 
 
     // ${projet.title.toLowerCase().includes(selected.toLowerCase()) ? 
@@ -39,7 +43,7 @@ export default function project({ projet, selected }) {
                         <h2 className='text-white text-md'>{projet.title}</h2>*/}
                         </div>
                             <div className="rounded corners-bottom relative flex flex-col justify-start items-center xs:min-h-[200px] min-h-[500px] w-full">
-                                <iframe className="responsive-iframe px-4 pb-4" src={`https://www.youtube.com/embed/${projet.youtube}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                                <iframe className="responsive-iframe px-4 pb-4" src={`https://www.youtube.com/embed/${projet.youtube}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                             </div>
                         </div>
                         
