@@ -1,9 +1,14 @@
 'use client';
 
-import React, {useState} from 'react';
+import React, {SetStateAction, useState} from 'react';
+import { Dispatch } from 'react';
 
+interface ChronologyProps {
+    setProject: Dispatch<SetStateAction<'nonogram' | 'ménestrel' | 'portfolio' | 'toshilive' | 'xboxhq'>>
+    project: string;
+  }
 
-export default function Chronology({setProject, project}) {
+export default function Chronology({setProject, project} : ChronologyProps) {
   /*  <div className='w-20 h-12 flex flex-row justify-center items-center rounded bg-cream border-b-4 cream-darker'>
     <p className='rotate-30 text-cyan-600 p-2 m-0 text-sm'>2025</p></div>
     
