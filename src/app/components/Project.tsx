@@ -113,7 +113,7 @@ export default function Project({ projet, selected } : projectParamsType) {
                     </div>
                     <div className='h-3/4 overflow-y-auto'>
                         {readMode === "basic" && <ul className='flex flex-col justify-around items-center fadeIn text-cyan-600 text-sm h-full'>
-                            {projet.summary.map((key, index) => <div className='w-full flex flex-row justify-start items-center'>
+                            {projet.summary.map((key, index) => <div key={key} className='w-full flex flex-row justify-start items-center'>
                                 <Image
                                     src={`./icons/key_cyan.svg`}
                                     width={25}
