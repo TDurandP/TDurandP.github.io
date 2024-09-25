@@ -1,11 +1,10 @@
 'use client';
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import Profile from "./components/Profile";
 import Letter from "./components/Letter";
 import { addDynamicWord } from "./utils";
 import TextIcon from "./components/TextIcon";
-import Chamber from "./components/Chamber";
 import { nonogramProject } from "./projects/nonogram";
 import Projet from "./components/Projet";
 import { menestrelProject } from "./projects/menestrel";
@@ -17,15 +16,15 @@ import Image from "next/image";
 
 export default function Home() {
   const [position, setPosition] = useState<number>(0);
-  const [theme, setTheme] = useState<string>('Web');
+  //const [theme, setTheme] = useState<string>('Web');
 
   /*const retrieveURL = (): string => {
     return document.baseURI.toString();
   }*/
 
   const handleMouseMove = (e) => {
-    const minX = -5;
-    const maxX = 5;
+    //const minX = -5;
+    //const maxX = 5;
     //const clampedX = Math.max(minX, Math.min(maxX, e.clientX));
     setPosition(e.clientX - (e.nativeEvent.view.innerWidth / 2));
   };

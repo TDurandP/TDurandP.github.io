@@ -5,7 +5,7 @@ import React, { useRef } from 'react';
 export default function Chamber({theme, setTheme}) {
     const centerY = useRef(null);
 
-    const switchTheme = (label: string, event) => {
+    const switchTheme = (label: string) => {
         setTheme(label);
 
         /*

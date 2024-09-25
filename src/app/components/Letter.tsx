@@ -24,7 +24,7 @@ export default function Letter({ letter }) {
         return () => {
             clearInterval(letterInterval)
         };
-    }, [currentCooldown])
+    }, [currentCooldown, letter, speed])
 
     return (
         <span className='xs:text-md sm:text-md md:text-md lg:text-lg xl:text-lg'>{currentLetter}</span>
