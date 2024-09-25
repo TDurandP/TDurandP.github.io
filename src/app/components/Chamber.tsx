@@ -3,9 +3,6 @@
 import React, { useRef, useState } from 'react';
 
 export default function Chamber({theme, setTheme}) {
-    
-    const [themeYPos, setThemeYPos] = useState<number>(0);
-    const [ySlide, setYSlide] = useState<number>(0);
     const centerY = useRef(null);
 
     const switchTheme = (label: string, event) => {
@@ -13,9 +10,6 @@ export default function Chamber({theme, setTheme}) {
 
         const alignPoint = centerY.current.getBoundingClientRect();
         const rect = event.target.getBoundingClientRect();
-
-        console.log(rect.top - alignPoint.top);
-        setThemeYPos(rect.top - alignPoint.top);
     }
 
     const handleAim = () => {
