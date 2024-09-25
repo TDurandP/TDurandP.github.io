@@ -12,7 +12,7 @@ const RandomSpan = ({ text }) => {
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    let timeoutIds = [];
+    const timeoutIds : any = [];
     const totalDuration = 4000; // 4 seconds
     const cooldown = 500; // Adjust the cooldown time as needed
     const maxLetters = Math.floor(totalDuration / cooldown);

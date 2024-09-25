@@ -54,6 +54,7 @@ const Letter = ({ key, letter }) => {
   );
 };
 
+// eslint-disable-next-line react/display-name
 const Title = memo(() => {
   const addDynamicWord = (word) => {
     return word.split('');
