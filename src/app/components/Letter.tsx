@@ -3,7 +3,8 @@ import { getRandomDuration, pickRandomCharacter } from '../utils';
 
 export default function Letter({ letter }) {
     const [currentLetter, setCurrentLetter] = useState('');
-    const [speed, setSpeed] = useState(getRandomDuration() * 10);
+    //const [speed, setSpeed] = useState(getRandomDuration() * 10);
+    const speed = getRandomDuration() * 10
     const [currentCooldown, setCurrentCooldown] = useState<number>(0);
     useEffect(() => {
         console.log('random duration : ' + getRandomDuration());

@@ -19,19 +19,16 @@ export default function Home() {
   const [position, setPosition] = useState<number>(0);
   const [theme, setTheme] = useState<string>('Web');
 
-  const retrieveURL = (): string => {
+  /*const retrieveURL = (): string => {
     return document.baseURI.toString();
-  }
+  }*/
 
   const handleMouseMove = (e) => {
     const minX = -5;
     const maxX = 5;
-    const clampedX = Math.max(minX, Math.min(maxX, e.clientX));
+    //const clampedX = Math.max(minX, Math.min(maxX, e.clientX));
     setPosition(e.clientX - (e.nativeEvent.view.innerWidth / 2));
   };
-
-  const linesRef = useRef(null);
-
 
   //      {/*<Chamber theme={theme} setTheme={setTheme} />*/}
   return (
@@ -57,12 +54,12 @@ export default function Home() {
 
           <div className="w-full flex flex-col justify-start items-center">
             <div className="relative sm:h-10 xs:h-10 md:h-12 lg:h-20 xl:h-20 slideFromLeft flex flex-row justify-center items-center font-cream bg-cream xs:p-4 sm:p-4 md:p-4 lg:p-4 xl:p-4 text-2xl font-gray-alt font-wwDigital xs:w-2/3 sm:w-2/3 md:w-1/3 lg:w-1/4 xl:w-1/4">
-              <div className="flex flex-row justify-start items-center">{addDynamicWord("DURAND").map(letter => { return <Letter letter={`${letter}`}></Letter> })}</div>
-              <div className="flex flex-row justify-start items-center pl-2">{addDynamicWord("Thomas").map(letter => { return <Letter letter={`${letter}`}></Letter> })}</div>
+              <div className="flex flex-row justify-start items-center">{addDynamicWord("DURAND").map((letter, index) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
+              <div className="flex flex-row justify-start items-center pl-2">{addDynamicWord("Thomas").map((letter, index) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
             </div>
             <div className="relative sm:h-10 xs:h-10 md:h-12 lg:h-20 xl:h-20 slideFromRight flex flex-row justify-center items-center font-cream bg-cream xs:p-4 sm:p-4 md:p-4 lg:p-4 xl:p-4 text-2xl font-gray-alt font-wwDigital xs:w-2/3 sm:w-2/3 md:w-1/3 lg:w-1/4 xl:w-1/4">
-              <div className="flex flex-row justify-start items-center">{addDynamicWord("Développeur").map(letter => { return <Letter letter={`${letter}`}></Letter> })}</div>
-              <div className="flex flex-row justify-start items-center pl-2">{addDynamicWord("WEB").map(letter => { return <Letter letter={`${letter}`}></Letter> })}</div>
+              <div className="flex flex-row justify-start items-center">{addDynamicWord("Développeur").map((letter, index) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
+              <div className="flex flex-row justify-start items-center pl-2">{addDynamicWord("WEB").map((letter, index) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
             </div>
           </div>
 

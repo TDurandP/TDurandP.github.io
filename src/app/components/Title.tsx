@@ -1,6 +1,6 @@
 'use client';
 
-import React, { memo, useEffect } from 'react';
+import React, { memo } from 'react';
 import { styled, keyframes } from '../../../stitches.config';
 
 
@@ -54,7 +54,7 @@ const Letter = ({ key, letter }) => {
   );
 };
 
-const Title = memo(({ word1, word2, direction }) => {
+const Title = memo(() => {
   const addDynamicWord = (word) => {
     return word.split('');
   };

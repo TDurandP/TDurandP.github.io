@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 
 export default function Chamber({theme, setTheme}) {
     const centerY = useRef(null);
@@ -8,8 +8,9 @@ export default function Chamber({theme, setTheme}) {
     const switchTheme = (label: string, event) => {
         setTheme(label);
 
+        /*
         const alignPoint = centerY.current.getBoundingClientRect();
-        const rect = event.target.getBoundingClientRect();
+        const rect = event.target.getBoundingClientRect();*/
     }
 
     const handleAim = () => {
