@@ -1,8 +1,12 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { Dispatch, SetStateAction, useRef } from 'react';
 
-export default function Chamber({theme, setTheme}) {
+interface chamberParamsType {
+    theme: string,
+    setTheme: Dispatch<SetStateAction<string>>
+}
+export default function Chamber({theme, setTheme} : chamberParamsType) {
     const centerY = useRef(null);
 
     const switchTheme = (label: string) => {
@@ -39,12 +43,12 @@ export default function Chamber({theme, setTheme}) {
             <h2 ref={centerY} className={`bg-cream h-6 w-6 p-2 font-fakeReceipt text-cream text-xl`}></h2>
 
             <div style={{ top: handleAim() }} className={`cursor-pointer absolute right-[-175px] font-fakeReceipt text-cream text-xl flex flex-col justify-center items-start adaptPosition`}>
-                <p className={`${theme === 'Mods' ? `opacity-100 font-cream ` : 'opacity-50 font-cream-alt'} text-lg h-8 adaptOpacity adaptColor adaptOrder`} onClick={(e) => switchTheme('Mods', e)}>Mods</p>
-                <p className={`${theme === 'Plugins' ? `opacity-100 font-cream ` : ' opacity-50 font-cream-alt'} text-lg h-8 adaptOpacity adaptColor adaptOrder`} onClick={(e) => switchTheme('Plugins', e)}>Plugins</p>
-                <p className={`${theme === 'Webextensions' ? `opacity-100 font-cream ` : 'opacity-50 font-cream-alt'} text-lg h-8 adaptOpacity adaptColor adaptOrder`} onClick={(e) => switchTheme('Webextensions', e)}>Webextensions</p>
-                <p className={`${theme === '3D' ? `opacity-100 font-cream ` : 'opacity-50 font-cream-alt'} text-lg h-8 adaptOpacity adaptColor adaptOrder`} onClick={(e) => switchTheme('3D', e)}>3D</p>
-                <p className={`${theme === 'Demo' ? `opacity-100 font-cream ` : 'opacity-50 font-cream-alt'} text-lg h-8 adaptOpacity adaptColor adaptOrder`} onClick={(e) => switchTheme('Demo', e)}>Demo</p>
-                <p className={`${theme === 'Web' ? `opacity-100 font-cream ` : 'opacity-50 font-cream-alt'} text-lg h-8 adaptOpacity adaptColor adaptOrder`} onClick={(e) => switchTheme('Web', e)}>Web</p>
+                <p className={`${theme === 'Mods' ? `opacity-100 font-cream ` : 'opacity-50 font-cream-alt'} text-lg h-8 adaptOpacity adaptColor adaptOrder`} onClick={(e) => switchTheme('Mods')}>Mods</p>
+                <p className={`${theme === 'Plugins' ? `opacity-100 font-cream ` : ' opacity-50 font-cream-alt'} text-lg h-8 adaptOpacity adaptColor adaptOrder`} onClick={(e) => switchTheme('Plugins')}>Plugins</p>
+                <p className={`${theme === 'Webextensions' ? `opacity-100 font-cream ` : 'opacity-50 font-cream-alt'} text-lg h-8 adaptOpacity adaptColor adaptOrder`} onClick={(e) => switchTheme('Webextensions')}>Webextensions</p>
+                <p className={`${theme === '3D' ? `opacity-100 font-cream ` : 'opacity-50 font-cream-alt'} text-lg h-8 adaptOpacity adaptColor adaptOrder`} onClick={(e) => switchTheme('3D')}>3D</p>
+                <p className={`${theme === 'Demo' ? `opacity-100 font-cream ` : 'opacity-50 font-cream-alt'} text-lg h-8 adaptOpacity adaptColor adaptOrder`} onClick={(e) => switchTheme('Demo')}>Demo</p>
+                <p className={`${theme === 'Web' ? `opacity-100 font-cream ` : 'opacity-50 font-cream-alt'} text-lg h-8 adaptOpacity adaptColor adaptOrder`} onClick={(e) => switchTheme('Web')}>Web</p>
             </div>
         </div>
     )

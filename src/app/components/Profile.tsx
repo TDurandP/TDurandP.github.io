@@ -1,9 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 
-export default function Profile({position}) {
-
-
+interface ProfileParamsType {
+    position: number
+}
+export default function Profile({position} : ProfileParamsType) {
     return (
         <div className="w-60 h-60 flex flex-row justify-center items-start">
             <div className="absolute w-[200px] h-[200px] flex flex-row justify-start items-start border-lines">

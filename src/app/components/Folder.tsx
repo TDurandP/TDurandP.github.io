@@ -1,7 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import { projectType } from '../types/projectType';
 
-export default function Folder({ projet }) {
+interface folderParamsType {
+  projet: projectType
+}
+export default function Folder({ projet } : folderParamsType) {
 
   return (
     

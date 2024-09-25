@@ -7,8 +7,11 @@ const getRandomLetter = () => {
 };
 
 
+interface randomSpanParamsType {
+  text: string
+}
 
-const RandomSpan = ({ text }) => {
+const RandomSpan = ({ text } : randomSpanParamsType) => {
   const [content, setContent] = useState('');
 
   useEffect(() => {

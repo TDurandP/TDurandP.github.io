@@ -22,16 +22,20 @@ export default function Home() {
     return document.baseURI.toString();
   }*/
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     //const minX = -5;
     //const maxX = 5;
     //const clampedX = Math.max(minX, Math.min(maxX, e.clientX));
-    setPosition(e.clientX - (e.nativeEvent.view.innerWidth / 2));
+    const view = e.nativeEvent.view;
+    if (view) {
+      setPosition(e.clientX - (view.innerWidth / 2));
+    }
+    //setPosition(e.clientX - (e.nativeEvent.view.innerWidth / 2));
   };
 
   //      {/*<Chamber theme={theme} setTheme={setTheme} />*/}
   return (
-    <main onMouseMove={(e) => handleMouseMove(e)} className="h-full flex flex-col justify-start items-center">
+    <main onMouseMove={(e: React.MouseEvent<HTMLElement>) => handleMouseMove(e)} className="h-full flex flex-col justify-start items-center">
 
 
 
@@ -53,12 +57,12 @@ export default function Home() {
 
           <div className="w-full flex flex-col justify-start items-center">
             <div className="relative sm:h-10 xs:h-10 md:h-12 lg:h-20 xl:h-20 slideFromLeft flex flex-row justify-center items-center font-cream bg-cream xs:p-4 sm:p-4 md:p-4 lg:p-4 xl:p-4 text-2xl font-gray-alt font-wwDigital xs:w-2/3 sm:w-2/3 md:w-1/3 lg:w-1/4 xl:w-1/4">
-              <div className="flex flex-row justify-start items-center">{addDynamicWord("DURAND").map((letter, index) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
-              <div className="flex flex-row justify-start items-center pl-2">{addDynamicWord("Thomas").map((letter, index) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
+              <div className="flex flex-row justify-start items-center">{addDynamicWord("DURAND").map((letter : string, index : number) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
+              <div className="flex flex-row justify-start items-center pl-2">{addDynamicWord("Thomas").map((letter : string, index : number) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
             </div>
             <div className="relative sm:h-10 xs:h-10 md:h-12 lg:h-20 xl:h-20 slideFromRight flex flex-row justify-center items-center font-cream bg-cream xs:p-4 sm:p-4 md:p-4 lg:p-4 xl:p-4 text-2xl font-gray-alt font-wwDigital xs:w-2/3 sm:w-2/3 md:w-1/3 lg:w-1/4 xl:w-1/4">
-              <div className="flex flex-row justify-start items-center">{addDynamicWord("Développeur").map((letter, index) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
-              <div className="flex flex-row justify-start items-center pl-2">{addDynamicWord("WEB").map((letter, index) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
+              <div className="flex flex-row justify-start items-center">{addDynamicWord("Développeur").map((letter : string, index : number) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
+              <div className="flex flex-row justify-start items-center pl-2">{addDynamicWord("WEB").map((letter : string, index : number) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
             </div>
           </div>
 
@@ -67,8 +71,8 @@ export default function Home() {
           </div>
 
           <div className="w-full flex xs:flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row xs:justify-start xs:items-center  sm:justify-start sm:items-center  md:justify-start md:items-center lg:justify-around lg:items-center xl:justify-around xl:items-center">
-            <TextIcon text={"+33 06 70 51 85 53"} icon={"phone"} />
-            <TextIcon text={"durandthomaspro@laposte.net"} icon={"mail"} />
+            <TextIcon text={"+33 06 70 51 85 53"} icon={"phone"} link=""/>
+            <TextIcon text={"durandthomaspro@laposte.net"} icon={"mail"} link="" />
             <TextIcon text={"LinkedIn profile"} icon={"linkedin"} link={"https://www.linkedin.com/in/thomas-durand-b22552181/"} />
           </div>
         </div>

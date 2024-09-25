@@ -48,7 +48,13 @@ const StyledSpan = styled('span', {
   },
 });
 
-const Letter = ({ key, letter }) => {
+
+interface letterParamsType {
+  key: number,
+  letter: string
+}
+
+const Letter = ({ key, letter } : letterParamsType) => {
   return (
     <StyledSpan key={key} className='text-white text-2xl' data-content={`${letter}`}></StyledSpan>
   );
@@ -56,7 +62,7 @@ const Letter = ({ key, letter }) => {
 
 // eslint-disable-next-line react/display-name
 const Title = memo(() => {
-  const addDynamicWord = (word) => {
+  const addDynamicWord = (word : string) => {
     return word.split('');
   };
 

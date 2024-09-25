@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { getRandomDuration, pickRandomCharacter } from '../utils';
 
-export default function Letter({ letter }) {
+interface letterParamsType {
+    letter : string
+}
+
+export default function Letter({ letter } : letterParamsType) {
     const [currentLetter, setCurrentLetter] = useState('');
     //const [speed, setSpeed] = useState(getRandomDuration() * 10);
     const speed = getRandomDuration() * 10

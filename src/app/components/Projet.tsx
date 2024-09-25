@@ -1,7 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import { projectType } from '../types/projectType';
 
-export default function Projet({ projet }) {
+interface projetParamsType {
+    projet: projectType
+  }
+export default function Projet({ projet } : projetParamsType) {
     return (
         <div className={`${projet.url ? 'opacity-100' : 'opacity-75'} md:1/2 lg:w-1/4 xl:w-1/4 lg:h-[800px] xl:h-[800px] flex flex-col justify-start items-center bg-cream m-8`}>
             <div className="w-full h-22 bg-cream-alt font-gray p-2 text-sm font-fakeReceipt font-gray-alt">

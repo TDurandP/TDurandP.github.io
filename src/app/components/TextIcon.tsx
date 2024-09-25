@@ -3,7 +3,14 @@
 import React from 'react';
 import Image from 'next/image';
 
-export default function TextIcon({text, icon, link = ""}) {
+
+interface textIconParamsType {
+  text: string,
+  icon: string,
+  link: string
+}
+
+export default function TextIcon({text, icon, link = ""} : textIconParamsType) {
 
   return (
     <div className='mx-4 flex flex-col justify-start items-center xs:w-3/4 sm:w-3/4 md:w-3/6 lg:w-2/6 xl:w-1/6'>
