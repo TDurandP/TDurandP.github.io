@@ -13,7 +13,7 @@ const fakeReceipt = localFont({
   weight: "100 900",
 });
 const barCode = localFont({
-  src: "./fonts/barCodeFont.ttf",
+  src: "./fonts/BarcodeFont.ttf",
   variable: "--font-barCode",
   weight: "100 900",
 });
