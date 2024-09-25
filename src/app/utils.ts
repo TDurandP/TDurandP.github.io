@@ -15,7 +15,7 @@ const generateAlphabetArray = () => {
   };
 
 
-  const addDynamicWord = (word) => {
+  const addDynamicWord = (word : string) => {
     return word.split('');
   };
 
