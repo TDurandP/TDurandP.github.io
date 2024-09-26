@@ -7,7 +7,7 @@ interface projetParamsType {
   }
 export default function Projet({ projet } : projetParamsType) {
     return (
-        <div className={`${projet.url ? 'opacity-100' : 'opacity-75'} md:1/2 lg:w-1/4 xl:w-1/4 lg:h-[800px] xl:h-[800px] flex flex-col justify-start items-center bg-cream m-8`}>
+        <div className={`${projet.url ? 'opacity-100' : 'opacity-75'} xs:w-full md:w-1/2 lg:w-1/4 xl:w-1/4 lg:h-[800px] xl:h-[800px] flex flex-col justify-start items-center bg-cream m-8`}>
             <div className="w-full h-22 bg-cream-alt font-gray p-2 text-sm font-fakeReceipt font-gray-alt">
                 {projet.title}
             </div>
@@ -28,8 +28,8 @@ export default function Projet({ projet } : projetParamsType) {
                     </p>
                     <div className='w-full h-full flex flex-col justify-around items-center'>
                         {projet.keys.map((paragraph, index) => (
-                            <div key={index} className="w-full h-22 flex flex-col justify-start items-center">
-                                <p className="w-4/5 h-20 my-2 font-wwDigital p-2">{paragraph}</p>
+                            <div key={index} className="w-full md:h-32 h-22 flex flex-col justify-start items-center">
+                                <p className="w-4/5  h-20 my-2 font-wwDigital p-2">{paragraph}</p>
                                 {projet.keys.length - 1 > index && <div className="w-1/2 rounded-xl bg-cream-alt h-[1px]"></div>}
                             </div>
                         ))}
