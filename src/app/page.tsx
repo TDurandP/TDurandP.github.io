@@ -52,7 +52,7 @@ export default function Home() {
         </div>
 
         <div className="z-20 absolute top-0 left-0 flex flex-col justify-around items-center corners h-[calc(100vh-8rem)] w-[calc(100vw-8rem)] m-16">
-          <h2 className="text-6xl font-barCode">tdurandp.github.io</h2>
+          <h2 className="xs:text-4xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-6xl font-barCode">tdurandp.github.io</h2>
           <Profile position={position} />
 
           <div className="w-full flex flex-col justify-start items-center">
