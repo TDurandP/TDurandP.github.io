@@ -56,17 +56,17 @@ export default function Home() {
           <Profile position={position} />
 
           <div className="w-full flex flex-col justify-start items-center">
-            <div className="relative sm:h-10 xs:h-10 md:h-12 lg:h-20 xl:h-20 slideFromLeft flex flex-row justify-center items-center font-cream bg-cream xs:p-2 sm:p-4 md:p-4 lg:p-4 xl:p-4  xs:text-lg text-2xl font-gray-alt font-wwDigital xs:w-2/3 sm:w-2/3 md:w-1/3 lg:w-1/4 xl:w-1/4">
+            <div className="relative sm:h-10 xs:h-10 md:h-12 lg:h-20 xl:h-20 slideFromLeft flex flex-row justify-center items-center font-cream bg-cream xs:p-2 sm:p-4 md:p-4 lg:p-4 xl:p-4  xs:text-sm text-2xl font-gray-alt font-wwDigital xs:w-2/3 sm:w-2/3 md:w-1/3 lg:w-1/4 xl:w-1/4">
               <div className="flex flex-row justify-start items-center">{addDynamicWord("DURAND").map((letter : string, index : number) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
               <div className="flex flex-row justify-start items-center pl-2">{addDynamicWord("Thomas").map((letter : string, index : number) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
             </div>
-            <div className="relative sm:h-10 xs:h-10 md:h-12 lg:h-20 xl:h-20 slideFromRight flex flex-row justify-center items-center font-cream bg-cream xs:p-2 sm:p-4 md:p-4 lg:p-4 xl:p-4  xs:text-lg text-2xl font-gray-alt font-wwDigital xs:w-2/3 sm:w-2/3 md:w-1/3 lg:w-1/4 xl:w-1/4">
+            <div className="relative sm:h-10 xs:h-10 md:h-12 lg:h-20 xl:h-20 slideFromRight flex flex-row justify-center items-center font-cream bg-cream xs:p-2 sm:p-4 md:p-4 lg:p-4 xl:p-4  xs:text-sm text-2xl font-gray-alt font-wwDigital xs:w-2/3 sm:w-2/3 md:w-1/3 lg:w-1/4 xl:w-1/4">
               <div className="flex flex-row justify-start items-center">{addDynamicWord("Développeur").map((letter : string, index : number) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
               <div className="flex flex-row justify-start items-center pl-2">{addDynamicWord("WEB").map((letter : string, index : number) => { return <Letter key={index} letter={`${letter}`}></Letter> })}</div>
             </div>
           </div>
 
-          <div className="flex flex-col justify-start items-center xs:w-full sm:w-full md:w-3/4 lg:w-3/4 xl:w-3/4 bg-gray-4 p-2 xs:m-1 sm:m-1 md:m-1 lg:m-2 xl:m-2 font-wwDigital font-cream xs:mt-4 xs:text-sm sm:text-md md:text-md lg:text-lg xl:text-lg">
+          <div className="flex flex-col justify-start items-center xs:w-full sm:w-full md:w-3/4 lg:w-3/4 xl:w-3/4 bg-gray-4 xs:p-1 p-2 xs:m-1 sm:m-1 md:m-1 lg:m-2 xl:m-2 font-wwDigital font-cream xs:mt-4 xs:text-sm sm:text-md md:text-md lg:text-lg xl:text-lg">
             <p>Développeur web de formation, je vous invite à découvrir toutes mes réalisations notables sur ce portfolio.</p>
           </div>
 
